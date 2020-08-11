@@ -12,7 +12,7 @@ app.use(morgan('dev'));
 app.use(cors()); 
 
 //PUERTO DEL APP
-const PORT = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 
 //conectar a la db
 conectarDB();
@@ -28,4 +28,4 @@ app.use('/api/proyectos', require('./routes/proyectos'));
 app.use('/api/tareas', require('./routes/tareas'));
 
 //INICIAR EL SERVER
-app.listen(PORT, () => console.log(`Server on port ${PORT}`));
+app.listen(port, '0.0.0.0', () => console.log(`Server on port ${port}`));
